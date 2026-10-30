@@ -1,0 +1,10 @@
+project: savantenvs/ovs
+target: miniflow_target
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/miniflow_target/testsuite
+cmds:
+  - cmd: /mayhem/miniflow_target
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/tests/oss-fuzz/config/ovs.dict
