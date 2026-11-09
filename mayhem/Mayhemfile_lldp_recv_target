@@ -1,0 +1,9 @@
+project: savantenvs/ovs
+target: lldp_recv_target-mined-0d23948
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/lldp_recv_target-mined-0d23948/testsuite
+cmds:
+  - cmd: /mayhem/lldp_recv_target
+    libfuzzer: true
+    timeout: 10
